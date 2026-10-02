@@ -222,7 +222,7 @@ require('lazy').setup({
     branch = 'main',
     config = function()
       local parsers = {
-        'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript',
+        'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'yaml',
         'vimdoc', 'vim', 'terraform', 'bash', 'markdown', 'markdown_inline',
       }
       require('nvim-treesitter').install(parsers)
@@ -559,8 +559,7 @@ local servers = {
   },
   
   clangd = {
-    filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'arduino' },
-    -- { 'arduino-language-server' }
+    filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'arduino'},
   },
 
 }
