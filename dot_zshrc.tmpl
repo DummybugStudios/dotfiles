@@ -2,6 +2,9 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
+plugins=(git fzf)
+source $ZSH/oh-my-zsh.sh
+
 alias v="nvim"
 alias vim="nvim"
 
@@ -20,6 +23,10 @@ export PATH="/Users/sid/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 alias yt-dlp="yt-dlp --cookies-from-browser brave"
+{{ end }}
+
+{{ if eq .chezmoi.os "linux" }}
+alias fd="fdfind"
 {{ end }}
 
 eval "$(mise activate zsh)"
