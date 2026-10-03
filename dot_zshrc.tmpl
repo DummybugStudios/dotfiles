@@ -26,6 +26,7 @@ alias yt-dlp="yt-dlp --cookies-from-browser brave"
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
+export PATH="$HOME/.local/bin:$PATH"
 alias fd="fdfind"
 {{ end }}
 
